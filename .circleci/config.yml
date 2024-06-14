@@ -5,7 +5,7 @@ jobs:
       - image: circleci/buildpack-deps:stretch
     environment:
       IMAGE_NAME: pablokbs/hola-docker
-    working_directory: ~/app
+    working_directory: ~/
     steps:
       - checkout
       - setup_remote_docker
