@@ -5,6 +5,6 @@ jobs:
     steps:
       - checkout
       - run: docker login -u $DOCKER_USER -p $DOCKER_PASS
-      - run: docker build -t bachlavalabs/labs:$CIRCLE_SHA1 .
-      - run: docker push bachlavalabs/labs:$CIRCLE_SHA1
+      - run: docker build -t sgregori/labs:$CIRCLE_SHA1 .
+      - run: docker push sgregori/labs:$CIRCLE_SHA1
       - run: "/bin/bash ~/.circleci/scripts/ci-deploy.sh $CIRCLE_SHA1"
